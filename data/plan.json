@@ -8,261 +8,170 @@
       "theme": "到着してワイキキへ",
       "spots": [
         {
-          "time": "10:30",
-          "name": "ダニエル・K・イノウエ国際空港",
+          "time": "08:30",
+          "name": "ダニエル・K・イノウエ国際空港（到着）",
           "address": "300 Rodgers Blvd, Honolulu, HI 96819",
           "lat": 21.3187,
           "lng": -157.9225,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Phone_Booths%2C_Diamond_Head_Concourse_Terminal_2%2C_Daniel_K._Inouye_International_Airport%2C_Honolulu%2C_HI.jpg/1280px-Phone_Booths%2C_Diamond_Head_Concourse_Terminal_2%2C_Daniel_K._Inouye_International_Airport%2C_Honolulu%2C_HI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Warren LeMay",
-            "license": "CC BY-SA 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Phone_Booths,_Diamond_Head_Concourse_Terminal_2,_Daniel_K._Inouye_International_Airport,_Honolulu,_HI.jpg"
-          },
-          "description": "到着後、レンタカーを受け取ってホテルへ。チェックインまでは荷物を預けて街歩き。",
-          "tags": [
-            "移動",
-            "レンタカー"
-          ]
+          "zoom": 13,
+          "photo": { "search": "Daniel K. Inouye International Airport" },
+          "description": "日本からの便で到着。入国審査と荷物の受け取りを済ませたら、タクシーまたは配車アプリでワイキキへ。ホテルまでは約25〜30分。",
+          "tags": ["空港", "タクシー"]
         },
         {
-          "time": "13:00",
-          "name": "ワイキキビーチ",
-          "address": "Waikiki Beach, Honolulu, HI 96815",
-          "lat": 21.2766,
-          "lng": -157.8278,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Waikiki_Beach_%282024%29-L1004709.jpg/1280px-Waikiki_Beach_%282024%29-L1004709.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Frank Schulenburg",
-            "license": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Waikiki_Beach_(2024)-L1004709.jpg"
-          },
-          "description": "まずは海へ。デューク・カハナモク像の前で記念撮影。日焼け止めを忘れずに。",
-          "tags": [
-            "ビーチ"
-          ]
+          "time": "10:00",
+          "name": "アロヒラニ・リゾート・ワイキキビーチ",
+          "address": "2490 Kalakaua Ave, Honolulu, HI 96815",
+          "photo": { "search": "Alohilani Resort Waikiki Beach" },
+          "description": "目の前がクヒオ・ビーチで、カパフル通りやKCCにも近く今回の行程に便利な立地。ロビーの大きな水槽も写真映えする。まずは荷物を預けて街へ。",
+          "tags": ["ホテル", "オーシャンフロント"],
+          "url": "https://www.alohilaniresort.com/"
         },
         {
-          "time": "16:00",
-          "name": "ロイヤル・ハワイアン・センター",
-          "address": "2201 Kalakaua Ave, Honolulu, HI 96815",
-          "lat": 21.2797,
-          "lng": -157.8297,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ceiling%2C_Royal_Hawaiian_Hotel%2C_Kalakaua_Avenue%2C_Waikiki%2C_Honolulu%2C_HI.jpg/1280px-Ceiling%2C_Royal_Hawaiian_Hotel%2C_Kalakaua_Avenue%2C_Waikiki%2C_Honolulu%2C_HI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "w_lemay",
-            "license": "CC BY-SA 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Ceiling,_Royal_Hawaiian_Hotel,_Kalakaua_Avenue,_Waikiki,_Honolulu,_HI.jpg"
-          },
-          "description": "ショッピングと無料のフラ・レッスン。夕食までの時間調整に。",
-          "tags": [
-            "ショッピング"
-          ]
+          "time": "11:30",
+          "name": "レインボー・ドライブイン",
+          "address": "3308 Kanaina Ave, Honolulu, HI 96815",
+          "photo": { "search": "Rainbow Drive-In Honolulu" },
+          "description": "ホテルから徒歩約10分。虹色の看板とレトロな外観は写真映え抜群。ロコモコやミックスプレートなど、地元で愛されるプレートランチを味わう。",
+          "tags": ["ランチ", "映え"]
+        },
+        {
+          "time": "12:45",
+          "name": "レナーズ・ベーカリー",
+          "address": "933 Kapahulu Ave, Honolulu, HI 96816",
+          "photo": { "search": "Leonard's Bakery Honolulu" },
+          "description": "レインボー・ドライブインから徒歩約10分。赤白ストライプの看板と、ピンクの箱に詰まった揚げたてマラサダを一緒に撮るのが定番。",
+          "tags": ["スイーツ", "映え"]
+        },
+        {
+          "time": "15:30",
+          "name": "クヒオ・ビーチ（デューク・カハナモク像）",
+          "address": "2453 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.2753,
+          "lng": -157.8259,
+          "photo": { "search": "Duke Kahanamoku statue Waikiki" },
+          "description": "チェックイン後、ホテルから徒歩すぐ。穏やかな浜でのんびりし、夕方は海に突き出た堤防の先から、夕日とサーファーのシルエットを狙う。",
+          "tags": ["ビーチ", "夕景"]
         },
         {
           "time": "18:30",
           "name": "デュークス・ワイキキ",
           "address": "2335 Kalakaua Ave, Honolulu, HI 96815",
-          "lat": 21.277,
-          "lng": -157.8275,
-          "photo": {
-            "search": "Duke's Waikiki restaurant"
-          },
-          "description": "サンセットを見ながら夕食。デザートのフラパイは必食。予約推奨。",
-          "tags": [
-            "ディナー",
-            "要予約"
-          ],
-          "url": "https://www.dukeswaikiki.com/"
+          "photo": { "search": "Outrigger Waikiki Beach Resort" },
+          "description": "クヒオ・ビーチから徒歩約10分。ビーチ沿いのテラス席で、ライトアップされた夜の海を眺めながら夕食。予約で海側の席を頼むのがおすすめ。",
+          "tags": ["ディナー", "オーシャンビュー"]
         }
       ]
     },
     {
       "label": "2日目",
       "date": "11/21 (土)",
-      "theme": "ダイヤモンドヘッドと東海岸",
+      "theme": "朝市と絶景、アートの街へ",
       "spots": [
         {
-          "time": "07:00",
-          "name": "ダイヤモンドヘッド",
-          "address": "Diamond Head Rd, Honolulu, HI 96815",
-          "lat": 21.262,
-          "lng": -157.806,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Diamond-Head-Hawaii-Nov-2001.jpg/1280px-Diamond-Head-Hawaii-Nov-2001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "ProveIt",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-            "source": "https://commons.wikimedia.org/wiki/File:Diamond-Head-Hawaii-Nov-2001.jpg"
-          },
-          "description": "往復約1.5時間のハイキング。入山は事前予約制なので前日までに予約しておく。",
-          "tags": [
-            "ハイキング",
-            "要予約"
-          ]
+          "time": "07:30",
+          "name": "KCCファーマーズマーケット",
+          "address": "4303 Diamond Head Rd, Honolulu, HI 96816",
+          "photo": { "search": "Kapiolani Community College" },
+          "description": "土曜朝だけの朝市。ホテルからタクシーで約10分。カラフルなアサイーボウルや南国フルーツを、ダイヤモンドヘッドを背景に撮りながら食べ歩く。",
+          "tags": ["朝食", "マーケット"]
         },
         {
-          "time": "09:30",
-          "name": "レナーズ・ベーカリー",
-          "address": "933 Kapahulu Ave, Honolulu, HI 96816",
-          "lat": 21.2848,
-          "lng": -157.8133,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Leonard%27s_Bakery_%284290322777%29.jpg/1280px-Leonard%27s_Bakery_%284290322777%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Arnold Gatilao from Oakland, CA, USA",
-            "license": "CC BY 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Leonard%27s_Bakery_(4290322777).jpg"
-          },
-          "description": "揚げたてのマラサダで朝ごはん。行列ができるので早めに。",
-          "tags": [
-            "朝食"
-          ]
+          "time": "09:00",
+          "name": "ダイヤモンドヘッド灯台・展望ポイント",
+          "address": "3399 Diamond Head Rd, Honolulu, HI 96815",
+          "photo": { "search": "Diamond Head Lighthouse" },
+          "description": "KCCから徒歩約15分、またはタクシーで約5分。白い灯台と崖下に広がる真っ青な海を一枚に収められる絶景スポット。冬は沖にクジラが見えることも。",
+          "tags": ["絶景", "映え"]
         },
         {
           "time": "11:00",
-          "name": "ハナウマ湾",
-          "address": "100 Hanauma Bay Rd, Honolulu, HI 96825",
-          "lat": 21.269,
-          "lng": -157.6938,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Hanauma_Bay%2C_Oahu%2C_Hawaii%2C_USA2.jpg/1280px-Hanauma_Bay%2C_Oahu%2C_Hawaii%2C_USA2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Diego Delso",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Hanauma_Bay,_Oahu,_Hawaii,_USA2.jpg"
-          },
-          "description": "シュノーケリング。火曜定休、入場はオンライン予約制。",
-          "tags": [
-            "シュノーケル",
-            "要予約"
-          ]
+          "name": "アラモアナセンター",
+          "address": "1450 Ala Moana Blvd, Honolulu, HI 96814",
+          "lat": 21.2910,
+          "lng": -157.8434,
+          "photo": { "search": "Ala Moana Center" },
+          "description": "展望ポイントからタクシーで約15分。ハワイ最大級のショッピングセンターで買い物。昼食はフードコートで好きなものを選べるので気楽。",
+          "tags": ["買い物", "ランチ"],
+          "url": "https://www.alamoanacenter.com/"
+        },
+        {
+          "time": "13:30",
+          "name": "カカアコのウォールアート",
+          "address": "691 Auahi St, Honolulu, HI 96813",
+          "photo": { "search": "Kakaako murals Honolulu" },
+          "description": "アラモアナセンターから徒歩約15分。倉庫街の壁一面に描かれた巨大ミューラルが点在し、どこで撮っても映える。周辺を散策しながらお気に入りの壁を探す。",
+          "tags": ["アート", "映え"]
         },
         {
           "time": "15:00",
-          "name": "ラニカイビーチ",
-          "address": "Mokulua Dr, Kailua, HI 96734",
-          "lat": 21.3931,
-          "lng": -157.7154,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Lanikai_Beach.jpg/1280px-Lanikai_Beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "R. Sullivan Sullynyflhi",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-            "source": "https://commons.wikimedia.org/wiki/File:Lanikai_Beach.jpg"
-          },
-          "description": "白い砂浜と遠浅の海。駐車場がないのでカイルアの町に停めて歩く。",
-          "tags": [
-            "ビーチ"
-          ]
+          "name": "アラモアナ・ビーチパーク",
+          "address": "1201 Ala Moana Blvd, Honolulu, HI 96814",
+          "lat": 21.2896,
+          "lng": -157.8487,
+          "zoom": 13,
+          "photo": { "search": "Ala Moana Beach Park" },
+          "description": "カカアコからタクシーで約5分。ワイキキより落ち着いた雰囲気で、ヤシの木と遠浅の海を眺めながら、波の穏やかな浜辺でのんびり過ごす。",
+          "tags": ["ビーチ", "のんびり"]
+        },
+        {
+          "time": "17:30",
+          "name": "マジックアイランド",
+          "address": "1201 Ala Moana Blvd, Honolulu, HI 96814",
+          "photo": { "search": "Magic Island Honolulu" },
+          "description": "ビーチパークの東端まで徒歩約10分。ヤシの木のシルエット越しに沈む夕日が撮れる、地元でも人気の夕景スポット。帰りはタクシーで約10分。",
+          "tags": ["夕景", "映え"]
         }
       ]
     },
     {
       "label": "3日目",
       "date": "11/22 (日)",
-      "theme": "ノースショア",
+      "theme": "朝のワイキキから帰国へ",
       "spots": [
         {
-          "time": "10:00",
-          "name": "ハレイワタウン",
-          "address": "66-145 Kamehameha Hwy, Haleiwa, HI 96712",
-          "lat": 21.5928,
-          "lng": -158.1031,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Haleiwa_Hotel%2C_Honolulu2.jpg/1280px-Haleiwa_Hotel%2C_Honolulu2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Melvin Vaniman",
-            "license": "Public domain",
-            "source": "https://commons.wikimedia.org/wiki/File:Haleiwa_Hotel,_Honolulu2.jpg"
-          },
-          "description": "サーフタウンを散策。マツモト・シェイブアイスでひと休み。",
-          "tags": [
-            "街歩き"
-          ]
+          "time": "07:00",
+          "name": "エッグスン・シングス サラトガ店",
+          "address": "343 Saratoga Rd, Honolulu, HI 96815",
+          "description": "ホテルからカラカウア通りを徒歩約20分、朝の散歩がてら。ホイップクリームが山盛りのパンケーキは、運ばれてきた瞬間に撮りたくなる一皿。",
+          "tags": ["朝食", "映え"]
         },
         {
-          "time": "12:00",
-          "name": "ジョバンニズ・シュリンプトラック",
-          "address": "66-472 Kamehameha Hwy, Haleiwa, HI 96712",
-          "lat": 21.5803,
-          "lng": -158.1047,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Giovannis_shrimp_truck_Oahu_Hawaii_Photo_Don_Ramey_Logan.jpg/1280px-Giovannis_shrimp_truck_Oahu_Hawaii_Photo_Don_Ramey_Logan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Don Ramey Logan",
-            "license": "CC BY-SA 3.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Giovannis_shrimp_truck_Oahu_Hawaii_Photo_Don_Ramey_Logan.jpg"
-          },
-          "description": "名物のガーリックシュリンプでランチ。現金のみの場合あり。",
-          "tags": [
-            "ランチ"
-          ]
+          "time": "08:15",
+          "name": "コナ・コーヒー・パーベイヤーズ",
+          "address": "2330 Kalakaua Ave, Honolulu, HI 96815",
+          "photo": { "search": "International Market Place Waikiki" },
+          "description": "インターナショナル・マーケットプレイス内、徒歩約10分。緑に囲まれたおしゃれな店内でコナコーヒーを一杯。大きなバニヤンツリーも見どころ。",
+          "tags": ["カフェ", "徒歩"]
         },
         {
-          "time": "14:00",
-          "name": "ワイメア湾",
-          "address": "61-31 Kamehameha Hwy, Haleiwa, HI 96712",
-          "lat": 21.642,
-          "lng": -158.066,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/The_Eddie_Aikau_Big_Wave_Invitational%2C_Waimea_Bay%2C_Oahu%2C_Hawaii.jpg/1280px-The_Eddie_Aikau_Big_Wave_Invitational%2C_Waimea_Bay%2C_Oahu%2C_Hawaii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "AK KAMEDA PHOTOS",
-            "license": "CC BY 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-            "source": "https://commons.wikimedia.org/wiki/File:The_Eddie_Aikau_Big_Wave_Invitational,_Waimea_Bay,_Oahu,_Hawaii.jpg"
-          },
-          "description": "冬は大波のシーズン。泳ぐより眺めて楽しむ日に。",
-          "tags": [
-            "ビーチ",
-            "絶景"
-          ]
+          "time": "08:45",
+          "name": "ロイヤル・ハワイアン・ホテル",
+          "address": "2259 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.2777,
+          "lng": -157.8295,
+          "photo": { "search": "Royal Hawaiian Hotel Waikiki" },
+          "description": "カフェから徒歩約3分。「ピンクパレス」と呼ばれる外観や、ビーチに並ぶピンクのパラソルを背景に記念撮影。ホテルまで海沿いを歩いて約15分。",
+          "tags": ["散歩", "映え"]
         },
         {
-          "time": "18:00",
-          "name": "アラモアナセンター",
-          "address": "1450 Ala Moana Blvd, Honolulu, HI 96814",
-          "lat": 21.2911,
-          "lng": -157.8432,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Ala_Moana_Centerstage_at_the_Ala_Mona_Center.jpg/1280px-Ala_Moana_Centerstage_at_the_Ala_Mona_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Richard N Horne",
-            "license": "CC BY-SA 4.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Ala_Moana_Centerstage_at_the_Ala_Mona_Center.jpg"
-          },
-          "description": "お土産をまとめ買いして、フードコートで夕食。",
-          "tags": [
-            "ショッピング",
-            "ディナー"
-          ]
-        }
-      ]
-    },
-    {
-      "label": "4日目",
-      "date": "11/23 (月)",
-      "theme": "帰国",
-      "spots": [
+          "time": "09:30",
+          "name": "アロヒラニ・リゾート・ワイキキビーチ（チェックアウト）",
+          "address": "2490 Kalakaua Ave, Honolulu, HI 96815",
+          "photo": { "search": "Alohilani Resort Waikiki Beach" },
+          "description": "部屋で荷物をまとめてチェックアウト。フロントでタクシーを手配してもらい、空港へ向かう。",
+          "tags": ["ホテル", "チェックアウト"]
+        },
         {
-          "time": "09:00",
-          "name": "ダニエル・K・イノウエ国際空港",
+          "time": "10:30",
+          "name": "ダニエル・K・イノウエ国際空港（出発）",
           "address": "300 Rodgers Blvd, Honolulu, HI 96819",
           "lat": 21.3187,
           "lng": -157.9225,
-          "photo": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Phone_Booths%2C_Diamond_Head_Concourse_Terminal_2%2C_Daniel_K._Inouye_International_Airport%2C_Honolulu%2C_HI.jpg/1280px-Phone_Booths%2C_Diamond_Head_Concourse_Terminal_2%2C_Daniel_K._Inouye_International_Airport%2C_Honolulu%2C_HI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "credit": "Warren LeMay",
-            "license": "CC BY-SA 2.0",
-            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-            "source": "https://commons.wikimedia.org/wiki/File:Phone_Booths,_Diamond_Head_Concourse_Terminal_2,_Daniel_K._Inouye_International_Airport,_Honolulu,_HI.jpg"
-          },
-          "description": "レンタカー返却は出発3時間前までに。",
-          "tags": [
-            "移動"
-          ]
+          "zoom": 13,
+          "photo": { "search": "Daniel K. Inouye International Airport" },
+          "description": "ホテルからタクシーで約25〜30分。昼過ぎの便に向けて余裕をもって到着し、出国手続きへ。機内で一泊し、翌23日に日本へ帰着。",
+          "tags": ["空港", "タクシー"]
         }
       ]
     }
