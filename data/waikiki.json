@@ -1,0 +1,305 @@
+{
+  "title": "歩いて楽しむワイキキ 3日間",
+  "subtitle": "車なし・徒歩とトロリーで回るプラン",
+  "days": [
+    {
+      "label": "1日目",
+      "date": "到着日",
+      "theme": "カラカウア通りをのんびり",
+      "spots": [
+        {
+          "time": "14:00",
+          "name": "ワイキキビーチ",
+          "address": "Waikiki Beach, Honolulu, HI 96815",
+          "lat": 21.2766,
+          "lng": -157.8278,
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Waikiki_Beach_%282024%29-L1004709.jpg/1280px-Waikiki_Beach_%282024%29-L1004709.jpg",
+            "credit": "Frank Schulenburg",
+            "license": "CC BY-SA",
+            "source": "https://commons.wikimedia.org/wiki/File:Waikiki_Beach_%282024%29-L1004709.jpg"
+          },
+          "description": "チェックイン前に荷物を預けて、まずは砂浜へ。遠くにダイヤモンドヘッドが見える定番の景色。",
+          "tags": [
+            "ビーチ",
+            "徒歩"
+          ]
+        },
+        {
+          "time": "15:00",
+          "name": "デューク・カハナモク像",
+          "address": "Kuhio Beach, 2453 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.276,
+          "lng": -157.8263,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/2021-10-12_09_24_22_View_southwest_toward_the_beach_just_northwest_of_the_Duke_Paoa_Kahanamoku_Statue_in_Waikiki%2C_Honolulu%2C_Oahu%2C_Hawaii.jpg/1280px-2021-10-12_09_24_22_View_southwest_toward_the_beach_just_northwest_of_the_Duke_Paoa_Kahanamoku_Statue_in_Waikiki%2C_Honolulu%2C_Oahu%2C_Hawaii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Famartin",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:2021-10-12_09_24_22_View_southwest_toward_the_beach_just_northwest_of_the_Duke_Paoa_Kahanamoku_Statue_in_Waikiki,_Honolulu,_Oahu,_Hawaii.jpg"
+          },
+          "description": "近代サーフィンの父の像。夕方はレイが掛けられていることも多い記念撮影スポット。",
+          "tags": [
+            "名所",
+            "写真"
+          ]
+        },
+        {
+          "time": "15:30",
+          "name": "ロイヤル・ハワイアン",
+          "address": "2259 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.2779,
+          "lng": -157.8299,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/The_Royal_Hawaiian_%282024%29-L1004805.jpg/1280px-The_Royal_Hawaiian_%282024%29-L1004805.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Frank Schulenburg",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:The_Royal_Hawaiian_(2024)-L1004805.jpg"
+          },
+          "description": "「太平洋のピンク・パレス」と呼ばれる老舗ホテル。宿泊しなくてもロビーや庭の散策、ベーカリーでのお茶が楽しめる。",
+          "tags": [
+            "ホテル",
+            "カフェ"
+          ]
+        },
+        {
+          "time": "17:00",
+          "name": "インターナショナル・マーケットプレイス",
+          "address": "2330 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.2785,
+          "lng": -157.8268,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/U_S_Pacific_Fleet_Band_performs_at_International_Market_Place_%289173673%29.jpg/1280px-U_S_Pacific_Fleet_Band_performs_at_International_Market_Place_%289173673%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "U.S. Navy photo by Petty Officer 2nd Class Jeremy Boan",
+            "license": "Public domain",
+            "source": "https://commons.wikimedia.org/wiki/File:U_S_Pacific_Fleet_Band_performs_at_International_Market_Place_(9173673).jpg"
+          },
+          "description": "大きなバニヤンツリーが目印のショッピングモール。3階のレストランフロアで夕食に。",
+          "tags": [
+            "ショッピング",
+            "ディナー"
+          ]
+        },
+        {
+          "time": "18:30",
+          "name": "クヒオ・ビーチ・パーク",
+          "address": "2453 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.2747,
+          "lng": -157.8245,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Kuhio_Beach_Park.jpg/1280px-Kuhio_Beach_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Peaceray",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Kuhio_Beach_Park.jpg"
+          },
+          "description": "防波堤に囲まれた穏やかなビーチ。夕暮れ時は無料のフラショーが開かれる日もある（開催日は事前に確認）。",
+          "tags": [
+            "ビーチ",
+            "サンセット"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "2日目",
+      "date": "ダイヤモンドヘッド側",
+      "theme": "朝ハイクとカピオラニ公園",
+      "spots": [
+        {
+          "time": "06:30",
+          "name": "ダイヤモンドヘッド",
+          "address": "Diamond Head Rd, Honolulu, HI 96815",
+          "lat": 21.262,
+          "lng": -157.806,
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Diamond-Head-Hawaii-Nov-2001.jpg/1280px-Diamond-Head-Hawaii-Nov-2001.jpg",
+            "credit": "ProveIt",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "source": "https://commons.wikimedia.org/wiki/File:Diamond-Head-Hawaii-Nov-2001.jpg"
+          },
+          "description": "ワイキキからトロリーかバスで登山口へ。入山は事前予約制。山頂からワイキキの街並みを一望。",
+          "tags": [
+            "ハイキング",
+            "要予約"
+          ]
+        },
+        {
+          "time": "09:30",
+          "name": "レナーズ・ベーカリー",
+          "address": "933 Kapahulu Ave, Honolulu, HI 96816",
+          "lat": 21.2848,
+          "lng": -157.8133,
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Leonard%27s_malasadas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "_e.t from Saratoga, USA",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Leonard%27s_malasadas.jpg"
+          },
+          "description": "ハイキングのあとは揚げたてマラサダ。カパフル通りはローカルな飲食店が多く散歩も楽しい。",
+          "tags": [
+            "朝食",
+            "スイーツ"
+          ]
+        },
+        {
+          "time": "11:00",
+          "name": "ワイキキ水族館",
+          "address": "2777 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.2659,
+          "lng": -157.8218,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Waikiki_Aquarium_entrance.JPG/1280px-Waikiki_Aquarium_entrance.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Meowmeow10",
+            "license": "CC BY-SA 3.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Waikiki_Aquarium_entrance.JPG"
+          },
+          "description": "海沿いの小さな水族館。ハワイの海の生き物やモンクシールを見られる。1時間ほどで回れる。",
+          "tags": [
+            "水族館",
+            "雨の日OK"
+          ]
+        },
+        {
+          "time": "13:00",
+          "name": "カイマナビーチ",
+          "address": "2863 Kalakaua Ave, Honolulu, HI 96815",
+          "lat": 21.2635,
+          "lng": -157.8233,
+          "photo": {
+            "search": "Kaimana Beach Sans Souci Honolulu"
+          },
+          "description": "ワイキキの喧騒から少し離れた静かなビーチ。地元の人が多く、ゆっくり泳ぎたい日に。",
+          "tags": [
+            "ビーチ",
+            "穴場"
+          ]
+        },
+        {
+          "time": "15:30",
+          "name": "カピオラニ公園",
+          "address": "3840 Paki Ave, Honolulu, HI 96815",
+          "lat": 21.2688,
+          "lng": -157.8193,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Diamond_Head_from_Kapiolani_Park_%284670981021%29.jpg/1280px-Diamond_Head_from_Kapiolani_Park_%284670981021%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Daniel Ramirez from Honolulu, USA",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Diamond_Head_from_Kapiolani_Park_(4670981021).jpg"
+          },
+          "description": "ダイヤモンドヘッドを背にした広い芝生の公園。木陰で昼寝や、隣のホノルル動物園に寄るのも◎。",
+          "tags": [
+            "公園",
+            "休憩"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "3日目",
+      "date": "アラモアナ側",
+      "theme": "西へ歩いてサンセットまで",
+      "spots": [
+        {
+          "time": "08:00",
+          "name": "フォート・デラッシー・ビーチパーク",
+          "address": "2055 Kalia Rd, Honolulu, HI 96815",
+          "lat": 21.2793,
+          "lng": -157.8355,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Waikiki_Beach_from_US_Army_Museum.jpg/1280px-Waikiki_Beach_from_US_Army_Museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Masayuki (Yuki) Kawagishi",
+            "license": "CC BY 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Waikiki_Beach_from_US_Army_Museum.jpg"
+          },
+          "description": "芝生と砂浜が広がる、朝の散歩にぴったりのエリア。隣接する陸軍博物館はハワイの歴史を知るのに良い。",
+          "tags": [
+            "散歩",
+            "朝"
+          ]
+        },
+        {
+          "time": "10:00",
+          "name": "アラワイ運河",
+          "address": "Ala Wai Blvd, Honolulu, HI 96815",
+          "lat": 21.286,
+          "lng": -157.83,
+          "photo": {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Ala_Wai_Canal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Daryl Mitchell",
+            "license": "CC BY-SA 2.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Ala_Wai_Canal.jpg"
+          },
+          "description": "ワイキキの裏側を流れる運河。カヌーの練習風景を眺めながら運河沿いを歩く。",
+          "tags": [
+            "散歩",
+            "ローカル"
+          ]
+        },
+        {
+          "time": "12:00",
+          "name": "アラモアナセンター",
+          "address": "1450 Ala Moana Blvd, Honolulu, HI 96814",
+          "lat": 21.2911,
+          "lng": -157.8432,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Ala_Moana_Centerstage_at_the_Ala_Mona_Center.jpg/1280px-Ala_Moana_Centerstage_at_the_Ala_Mona_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Richard N Horne",
+            "license": "CC BY-SA 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Ala_Moana_Centerstage_at_the_Ala_Mona_Center.jpg"
+          },
+          "description": "ハワイ最大級のショッピングセンター。ランチとお土産の買い出しはここでまとめて。",
+          "tags": [
+            "ショッピング",
+            "ランチ"
+          ]
+        },
+        {
+          "time": "16:00",
+          "name": "アラモアナ・ビーチパーク",
+          "address": "1201 Ala Moana Blvd, Honolulu, HI 96814",
+          "lat": 21.2905,
+          "lng": -157.8487,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ala_Moana_Beach_Park_map_%28iau1507b%29.tif/lossy-page1-1280px-Ala_Moana_Beach_Park_map_%28iau1507b%29.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "IAU",
+            "license": "CC BY 4.0",
+            "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+            "source": "https://commons.wikimedia.org/wiki/File:Ala_Moana_Beach_Park_map_(iau1507b).tif"
+          },
+          "description": "遠浅で波が穏やかな地元に人気のビーチ。買い物のあとにひと泳ぎ。",
+          "tags": [
+            "ビーチ"
+          ]
+        },
+        {
+          "time": "18:00",
+          "name": "マジックアイランド",
+          "address": "Aina Moana State Recreation Area, Honolulu, HI 96814",
+          "lat": 21.2856,
+          "lng": -157.8473,
+          "photo": {
+            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Starr-070727-7686-Pterocarpus_indicus-leaves_sunset_and_beachgoers-Ala_Moana_Beach_Park_and_Magic_Island-Oahu_%2824262058014%29.jpg/1280px-Starr-070727-7686-Pterocarpus_indicus-leaves_sunset_and_beachgoers-Ala_Moana_Beach_Park_and_Magic_Island-Oahu_%2824262058014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Forest and Kim Starr",
+            "license": "CC BY 3.0 us",
+            "licenseUrl": "https://creativecommons.org/licenses/by/3.0/us/deed.en",
+            "source": "https://commons.wikimedia.org/wiki/File:Starr-070727-7686-Pterocarpus_indicus-leaves_sunset_and_beachgoers-Ala_Moana_Beach_Park_and_Magic_Island-Oahu_(24262058014).jpg"
+          },
+          "description": "旅の締めくくりはここで夕日を。突き出した岬からワイキキとダイヤモンドヘッドが一望できる。",
+          "tags": [
+            "サンセット",
+            "絶景"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+:root{
+  --bg:#F3F8F7;        /* 浅瀬 */
+  --surface:#FFFFFF;
+  --ink:#0B3C5D;       /* 深い海 */
+  --ink-soft:#4F6F82;
+  --line:#D6E6E4;
+  --lagoon:#0E7C86;    /* ラグーン */
+  --plumeria:#F2C14E;  /* プルメリア */
+  --font-head:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  --font-body:"Hiragino Sans","Noto Sans JP","Yu Gothic UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#081F2C; --surface:#0F2C3C; --ink:#E6F2F1; --ink-soft:#9CB8C2;
+    --line:#1E4152; --lagoon:#3FB7BF; --plumeria:#F5CD6A; color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:var(--font-body);-webkit-text-size-adjust:100%}
+
+#app{display:grid;grid-template-rows:1fr 2fr;height:100vh;height:100dvh}
+#map{position:relative;z-index:0;border-bottom:1px solid var(--line)}
+#plan{position:relative;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+
+.plan-head{padding:20px 20px 8px}
+.plan-head h1{font-family:var(--font-head);font-weight:700;font-size:1.6rem;line-height:1.2;margin:0}
+.plan-head p{margin:4px 0 0;color:var(--ink-soft);font-size:.875rem}
+
+/* 日ごとの見出し（スクロール中も上に残る） */
+.day-head{position:sticky;top:0;z-index:2;display:flex;align-items:baseline;gap:10px;
+  padding:12px 20px 10px;background:var(--bg);border-bottom:1px solid var(--line)}
+.day-head .label{font-family:var(--font-head);font-weight:700;font-size:1.05rem;color:var(--day)}
+.day-head .date{font-size:.8rem;color:var(--ink-soft)}
+.day-head .theme{margin-left:auto;font-size:.8rem;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:50%}
+
+/* タイムライン：左のレールが各日の色、表示中のスポットだけ点が光る */
+.spots{list-style:none;margin:0;padding:8px 16px 4px 0}
+.spot{position:relative;display:grid;grid-template-columns:56px 1fr;cursor:pointer}
+.spot::before{content:"";position:absolute;left:27px;top:0;bottom:0;width:2px;background:var(--day);opacity:.35}
+.spot:first-child::before{top:22px}
+.spot:last-child::before{bottom:auto;height:22px}
+.rail{position:relative;display:flex;flex-direction:column;align-items:center;padding-top:14px}
+.dot{width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--day);transition:transform .25s,background .25s,box-shadow .25s}
+.time{margin-top:4px;font-size:.7rem;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+.spot.active .dot{background:var(--plumeria);border-color:var(--plumeria);transform:scale(1.25);box-shadow:0 0 0 6px color-mix(in srgb,var(--plumeria) 30%,transparent)}
+
+.body{padding:10px 0 22px}
+.photo{aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,color-mix(in srgb,var(--day) 55%,var(--bg)),color-mix(in srgb,var(--lagoon) 35%,var(--bg)));display:grid;place-items:center;margin-bottom:10px}
+/* 読み込み中はプレースホルダーの上に画像が重なるよう、同じセルに置く */
+.photo>*{grid-area:1/1}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .ph{align-self:center;font-family:var(--font-head);font-size:1.1rem;color:#fff;padding:0 16px;text-align:center;text-shadow:0 1px 6px rgba(0,0,0,.25)}
+.name{font-family:var(--font-head);font-weight:700;font-size:1.15rem;line-height:1.35;margin:0 0 4px}
+.addr{display:inline-block;font-size:.8rem;color:var(--lagoon);text-decoration:none;margin-bottom:8px;word-break:break-word}
+.addr:focus-visible,.more:focus-visible{outline:2px solid var(--lagoon);outline-offset:2px;border-radius:4px}
+.desc{margin:0;font-size:.92rem;line-height:1.75}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
+.tags li{font-size:.72rem;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--day) 14%,var(--surface));color:var(--ink)}
+.more{display:inline-block;margin-top:10px;font-size:.85rem;color:var(--lagoon)}
+
+.spacer{height:60%}
+.end{padding:0 20px calc(24px + env(safe-area-inset-bottom,0px));color:var(--ink-soft);font-size:.8rem;text-align:center}
+
+/* JSONを読めなかったとき */
+.notice{margin:20px;padding:16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-size:.9rem;line-height:1.7}
+.notice code{font-size:.85em}
+.notice label{display:inline-block;margin-top:8px;padding:8px 14px;border-radius:999px;background:var(--lagoon);color:#fff;cursor:pointer}
+.notice input{position:absolute;opacity:0;width:1px;height:1px}
+
+/* 地図のピン */
+.pin{width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--c);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35);display:grid;place-items:center;transition:transform .25s}
+.pin span{transform:rotate(45deg);color:#fff;font:700 11px/1 var(--font-body)}
+.pin.dim{opacity:.55}
+.pin.active{background:var(--plumeria);transform:rotate(-45deg) scale(1.35);opacity:1}
+.pin.active span{color:#0B3C5D}
+.leaflet-tooltip{font-family:var(--font-body);font-weight:700}
+@media (prefers-color-scheme:dark){
+  .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.9) contrast(.9)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  #plan{scroll-behavior:auto}
+  .dot,.pin{transition:none}
+}
+
+/* 写真のクレジット（CC BY / BY-SA の表記義務） */
+.credit{margin:-4px 0 8px;font-size:.68rem;line-height:1.5;color:var(--ink-soft);word-break:break-word}
+.credit:empty{display:none}
+.credit a{color:inherit}
