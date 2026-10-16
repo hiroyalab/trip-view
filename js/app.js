@@ -43,7 +43,7 @@
   };
 
   // ===== 写真（Wikimedia Commons でライセンスを確認して表示） =====
-  // photo の書き方：
+  // photo の書き方（下のどれか1つ、または配列で複数枚）：
   //   "images/xxx.jpg" / "https://..."                 … そのまま表示（権利は自分で確認）
   //   { "commons": "File:ファイル名.jpg" }              … Commons の特定の写真を使う
   //   { "search": "Hanauma Bay" }                       … Commons から自動で探す
@@ -129,49 +129,108 @@
   // img は「先に DOM へ入れてから src をセット」する。
   // 未挿入(detached)のまま loading="lazy" を付けると、ブラウザが表示判定できず
   // 読み込みを開始しないことがあり、onload が来ないまま画像が出なくなる。
-  function showImage(spot, photo, src, onLoaded) {
+  function showImage(spot, slide, src, onLoaded, onError) {
     const img = el("img");
     img.alt = str(spot.name);
     img.decoding = "async";
     img.referrerPolicy = "no-referrer";
-    img.addEventListener("load", () => {
-      photo.querySelector(".ph")?.remove();   // 読み込めてからプレースホルダーを消す
-      onLoaded?.();
-    });
+    img.addEventListener("load", onLoaded);
     img.addEventListener("error", () => {
-      img.remove();                            // 失敗したらプレースホルダーに戻す
       console.warn("写真を表示できませんでした:", spot.name, src);
+      onError();
     });
-    photo.append(img);
+    slide.append(img);
     img.loading = "lazy";
     img.src = src;
   }
 
-  async function loadPhoto(spot, photo, credit) {
-    const p = spot.photo;
+  // photo 1件分を { src, クレジット情報 } にする。表示できない場合は null
+  // credit が false のものはクレジット欄を出さない（自分で用意した写真など）
+  async function resolvePhoto(spot, p) {
     if (typeof p === "string") {
       const src = safeUrl(p);
-      if (src) showImage(spot, photo, src);
-      else console.warn("photo のURLが不正です:", spot.name, p);
-      return;
+      if (!src) console.warn("photo のURLが不正です:", spot.name, p);
+      return src ? { src, credit: false } : null;
     }
-    if (!p || typeof p !== "object") return;
+    if (!p || typeof p !== "object") return null;
     if (p.url) {
       const src = safeUrl(p.url);
-      if (!src) { console.warn("photo.url が不正です:", spot.name, p.url); return; }
-      const info = { src, author: str(p.credit) || "作者不明", license: str(p.license), licenseUrl: safeUrl(p.licenseUrl), page: safeUrl(p.source) };
-      showImage(spot, photo, src, () => { if (p.credit || p.license) renderCredit(credit, info); });
-      return;
+      if (!src) { console.warn("photo.url が不正です:", spot.name, p.url); return null; }
+      return { src, author: str(p.credit) || "作者不明", license: str(p.license), licenseUrl: safeUrl(p.licenseUrl), page: safeUrl(p.source), credit: !!(p.credit || p.license) };
     }
     if (p.commons || p.search) {
       try {
         const info = await lookupCommons(p.commons ? { commons: p.commons } : { search: p.search });
-        if (!info) { console.warn("条件に合う写真が見つかりませんでした:", spot.name, p.commons || p.search); return; }
-        showImage(spot, photo, info.src, () => renderCredit(credit, info));
+        if (!info) console.warn("条件に合う写真が見つかりませんでした:", spot.name, p.commons || p.search);
+        return info && { ...info, credit: true };
       } catch (e) {
         console.warn("写真を取得できませんでした:", spot.name, e);
       }
     }
+    return null;
+  }
+
+  // ===== 写真のスライドショー =====
+  // photo / photos は1件でも配列でも書ける（両方あれば photos → photo の順に並べる）。横スワイプ・前後ボタンで切り替え、クレジットは表示中の写真のものを出す。
+  // 読み込めなかった写真はスライドごと取り除き、全部だめならスポット名入りの色面が残る。
+  const MAX_PHOTOS = 10;
+
+  function navButton(cls, label, text) {
+    const b = el("button", "nav " + cls, text);
+    b.type = "button";
+    b.setAttribute("aria-label", label);
+    return b;
+  }
+
+  function buildPhotos(spot) {
+    const list = [spot.photos, spot.photo].flat()
+      .filter(p => p != null && p !== "").slice(0, MAX_PHOTOS);
+    const photo = el("div", "photo");
+    const credit = el("p", "credit");
+    photo.append(el("span", "ph", spot.name));
+    if (!list.length) return [photo, credit];
+
+    const track = el("div", "track");
+    const prev = navButton("prev", "前の写真", "‹");
+    const next = navButton("next", "次の写真", "›");
+    const dots = el("div", "dots");
+    dots.setAttribute("aria-hidden", "true");
+    photo.append(track, prev, next, dots);
+
+    const slides = () => [...track.children];
+    const current = () => Math.min(Math.round(track.scrollLeft / (track.clientWidth || 1)), Math.max(slides().length - 1, 0));
+    function update() {
+      const s = slides(), i = current();
+      photo.classList.toggle("multi", s.length > 1);
+      if (dots.children.length !== s.length) dots.replaceChildren(...s.map(() => el("span")));
+      [...dots.children].forEach((d, k) => d.classList.toggle("on", k === i));
+      const info = s[i]?.info;
+      if (info) renderCredit(credit, info); else credit.replaceChildren();
+    }
+    function go(step) {
+      const n = slides().length;
+      if (n > 1) track.scrollTo({ left: ((current() + step + n) % n) * track.clientWidth });
+    }
+    prev.addEventListener("click", e => { e.stopPropagation(); go(-1); });
+    next.addEventListener("click", e => { e.stopPropagation(); go(1); });
+    let ticking = false;
+    track.addEventListener("scroll", () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { ticking = false; update(); });
+    }, { passive: true });
+
+    list.forEach(p => {
+      const slide = el("div", "slide");
+      track.append(slide);                 // 並び順を保つため、先に枠だけ入れておく
+      const drop = () => { slide.remove(); update(); };
+      resolvePhoto(spot, p).then(info => {
+        if (!info) return drop();
+        showImage(spot, slide, info.src, () => { if (info.credit) slide.info = info; update(); }, drop);
+      });
+    });
+    update();
+    return [photo, credit];
   }
 
   // ===== 地図 =====
@@ -293,12 +352,19 @@
         rail.append(el("div", "dot"), el("div", "time", spot.time));
 
         const body = el("div", "body");
-        const photo = el("div", "photo");
-        const credit = el("p", "credit");
-        photo.append(el("span", "ph", spot.name));
-        loadPhoto(spot, photo, credit);
-
-        body.append(photo, credit, el("h2", "name", spot.name));
+        // 写真はライセンスの制約で出せないことが多いので、タイトルの横に Google画像検索へのリンクも付ける
+        // udm=2 が画像検索タブ。検索語は imageQuery があればそれ、無ければスポット名
+        const title = el("div", "title-row");
+        title.append(el("h2", "name", spot.name));
+        const query = str(spot.imageQuery || spot.name).trim();
+        if (query) {
+          const a = el("a", "more-photos", "🔍 もっと写真を見る");
+          a.href = "https://www.google.com/search?udm=2&q=" + encodeURIComponent(query);
+          a.target = "_blank"; a.rel = "noopener noreferrer";
+          a.addEventListener("click", e => e.stopPropagation());
+          title.append(a);
+        }
+        body.append(...buildPhotos(spot), title);
         if (spot.address) {
           const a = el("a", "addr", "📍 " + spot.address);
           a.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(str(spot.address));

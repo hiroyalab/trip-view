@@ -14,7 +14,10 @@
           "lat": 21.3187,
           "lng": -157.9225,
           "zoom": 13,
-          "photo": { "search": "Daniel K. Inouye International Airport" },
+          "photos": [
+            { "search": "Daniel K. Inouye International Airport" },
+            { "search": "Honolulu International Airport terminal" }
+          ],
           "description": "日本からの便で到着。入国審査と荷物の受け取りを済ませたら、タクシーまたは配車アプリでワイキキへ。ホテルまでは約25〜30分。",
           "tags": ["空港", "タクシー"]
         },
@@ -22,7 +25,10 @@
           "time": "10:00",
           "name": "アロヒラニ・リゾート・ワイキキビーチ",
           "address": "2490 Kalakaua Ave, Honolulu, HI 96815",
-          "photo": { "search": "Alohilani Resort Waikiki Beach" },
+          "photos": [
+            { "search": "Alohilani Resort Waikiki Beach" },
+            { "search": "Pacific Beach Hotel Waikiki" }
+          ],
           "description": "目の前がクヒオ・ビーチで、カパフル通りやKCCにも近く今回の行程に便利な立地。ロビーの大きな水槽も写真映えする。まずは荷物を預けて街へ。",
           "tags": ["ホテル", "オーシャンフロント"],
           "url": "https://www.alohilaniresort.com/"
@@ -31,7 +37,9 @@
           "time": "11:30",
           "name": "レインボー・ドライブイン",
           "address": "3308 Kanaina Ave, Honolulu, HI 96815",
-          "photo": { "search": "Rainbow Drive-In Honolulu" },
+          "photos": [
+            { "search": "Rainbow Drive-In Honolulu" }
+          ],
           "description": "ホテルから徒歩約10分。虹色の看板とレトロな外観は写真映え抜群。ロコモコやミックスプレートなど、地元で愛されるプレートランチを味わう。",
           "tags": ["ランチ", "映え"]
         },
@@ -39,7 +47,10 @@
           "time": "12:45",
           "name": "レナーズ・ベーカリー",
           "address": "933 Kapahulu Ave, Honolulu, HI 96816",
-          "photo": { "search": "Leonard's Bakery Honolulu" },
+          "photos": [
+            { "search": "Leonard's Bakery Honolulu" },
+            { "search": "Malasada Hawaii" }
+          ],
           "description": "レインボー・ドライブインから徒歩約10分。赤白ストライプの看板と、ピンクの箱に詰まった揚げたてマラサダを一緒に撮るのが定番。",
           "tags": ["スイーツ", "映え"]
         },
@@ -49,7 +60,11 @@
           "address": "2453 Kalakaua Ave, Honolulu, HI 96815",
           "lat": 21.2753,
           "lng": -157.8259,
-          "photo": { "search": "Duke Kahanamoku statue Waikiki" },
+          "photos": [
+            { "search": "Duke Kahanamoku statue Waikiki" },
+            { "search": "Kuhio Beach Waikiki" },
+            { "search": "Kapahulu Groin Waikiki" }
+          ],
           "description": "チェックイン後、ホテルから徒歩すぐ。穏やかな浜でのんびりし、夕方は海に突き出た堤防の先から、夕日とサーファーのシルエットを狙う。",
           "tags": ["ビーチ", "夕景"]
         },
@@ -57,7 +72,9 @@
           "time": "18:30",
           "name": "デュークス・ワイキキ",
           "address": "2335 Kalakaua Ave, Honolulu, HI 96815",
-          "photo": { "search": "Outrigger Waikiki Beach Resort" },
+          "photos": [
+            { "search": "Outrigger Waikiki Beach Resort" }
+          ],
           "description": "クヒオ・ビーチから徒歩約10分。ビーチ沿いのテラス席で、ライトアップされた夜の海を眺めながら夕食。予約で海側の席を頼むのがおすすめ。",
           "tags": ["ディナー", "オーシャンビュー"]
         }
@@ -72,7 +89,11 @@
           "time": "07:30",
           "name": "KCCファーマーズマーケット",
           "address": "4303 Diamond Head Rd, Honolulu, HI 96816",
-          "photo": { "search": "Kapiolani Community College" },
+          "photos": [
+            { "search": "KCC Farmers Market Honolulu" },
+            { "search": "Kapiolani Community College" },
+            { "search": "Diamond Head crater Oahu" }
+          ],
           "description": "土曜朝だけの朝市。ホテルからタクシーで約10分。カラフルなアサイーボウルや南国フルーツを、ダイヤモンドヘッドを背景に撮りながら食べ歩く。",
           "tags": ["朝食", "マーケット"]
         },
@@ -80,7 +101,11 @@
           "time": "09:00",
           "name": "ダイヤモンドヘッド灯台・展望ポイント",
           "address": "3399 Diamond Head Rd, Honolulu, HI 96815",
-          "photo": { "search": "Diamond Head Lighthouse" },
+          "photos": [
+            { "search": "Diamond Head Lighthouse" },
+            { "search": "Kuilei Cliffs Beach Park" },
+            { "search": "Diamond Head Road coastline Honolulu" }
+          ],
           "description": "KCCから徒歩約15分、またはタクシーで約5分。白い灯台と崖下に広がる真っ青な海を一枚に収められる絶景スポット。冬は沖にクジラが見えることも。",
           "tags": ["絶景", "映え"]
         },
@@ -90,7 +115,10 @@
           "address": "1450 Ala Moana Blvd, Honolulu, HI 96814",
           "lat": 21.2910,
           "lng": -157.8434,
-          "photo": { "search": "Ala Moana Center" },
+          "photos": [
+            { "search": "Ala Moana Center" },
+            { "search": "Ala Moana Center Centerstage" }
+          ],
           "description": "展望ポイントからタクシーで約15分。ハワイ最大級のショッピングセンターで買い物。昼食はフードコートで好きなものを選べるので気楽。",
           "tags": ["買い物", "ランチ"],
           "url": "https://www.alamoanacenter.com/"
@@ -99,7 +127,11 @@
           "time": "13:30",
           "name": "カカアコのウォールアート",
           "address": "691 Auahi St, Honolulu, HI 96813",
-          "photo": { "search": "Kakaako murals Honolulu" },
+          "photos": [
+            { "search": "Kakaako murals Honolulu" },
+            { "search": "Pow! Wow! Hawaii mural Kakaako" },
+            { "search": "SALT at Our Kakaako" }
+          ],
           "description": "アラモアナセンターから徒歩約15分。倉庫街の壁一面に描かれた巨大ミューラルが点在し、どこで撮っても映える。周辺を散策しながらお気に入りの壁を探す。",
           "tags": ["アート", "映え"]
         },
@@ -110,7 +142,10 @@
           "lat": 21.2896,
           "lng": -157.8487,
           "zoom": 13,
-          "photo": { "search": "Ala Moana Beach Park" },
+          "photos": [
+            { "search": "Ala Moana Beach Park" },
+            { "search": "Ala Moana Beach Park palm trees" }
+          ],
           "description": "カカアコからタクシーで約5分。ワイキキより落ち着いた雰囲気で、ヤシの木と遠浅の海を眺めながら、波の穏やかな浜辺でのんびり過ごす。",
           "tags": ["ビーチ", "のんびり"]
         },
@@ -118,7 +153,11 @@
           "time": "17:30",
           "name": "マジックアイランド",
           "address": "1201 Ala Moana Blvd, Honolulu, HI 96814",
-          "photo": { "search": "Magic Island Honolulu" },
+          "photos": [
+            { "search": "Magic Island Honolulu" },
+            { "search": "Magic Island lagoon Ala Moana" },
+            { "search": "Aina Moana State Recreation Area" }
+          ],
           "description": "ビーチパークの東端まで徒歩約10分。ヤシの木のシルエット越しに沈む夕日が撮れる、地元でも人気の夕景スポット。帰りはタクシーで約10分。",
           "tags": ["夕景", "映え"]
         }
@@ -140,7 +179,10 @@
           "time": "08:15",
           "name": "コナ・コーヒー・パーベイヤーズ",
           "address": "2330 Kalakaua Ave, Honolulu, HI 96815",
-          "photo": { "search": "International Market Place Waikiki" },
+          "photos": [
+            { "search": "International Market Place Waikiki" },
+            { "search": "International Market Place banyan tree" }
+          ],
           "description": "インターナショナル・マーケットプレイス内、徒歩約10分。緑に囲まれたおしゃれな店内でコナコーヒーを一杯。大きなバニヤンツリーも見どころ。",
           "tags": ["カフェ", "徒歩"]
         },
@@ -150,7 +192,11 @@
           "address": "2259 Kalakaua Ave, Honolulu, HI 96815",
           "lat": 21.2777,
           "lng": -157.8295,
-          "photo": { "search": "Royal Hawaiian Hotel Waikiki" },
+          "photos": [
+            { "search": "Royal Hawaiian Hotel Waikiki" },
+            { "search": "Royal Hawaiian Hotel garden" },
+            { "search": "Royal Hawaiian Hotel pink umbrellas" }
+          ],
           "description": "カフェから徒歩約3分。「ピンクパレス」と呼ばれる外観や、ビーチに並ぶピンクのパラソルを背景に記念撮影。ホテルまで海沿いを歩いて約15分。",
           "tags": ["散歩", "映え"]
         },
@@ -158,7 +204,9 @@
           "time": "09:30",
           "name": "アロヒラニ・リゾート・ワイキキビーチ（チェックアウト）",
           "address": "2490 Kalakaua Ave, Honolulu, HI 96815",
-          "photo": { "search": "Alohilani Resort Waikiki Beach" },
+          "photos": [
+            { "search": "Alohilani Resort Waikiki Beach" }
+          ],
           "description": "部屋で荷物をまとめてチェックアウト。フロントでタクシーを手配してもらい、空港へ向かう。",
           "tags": ["ホテル", "チェックアウト"]
         },
@@ -169,7 +217,10 @@
           "lat": 21.3187,
           "lng": -157.9225,
           "zoom": 13,
-          "photo": { "search": "Daniel K. Inouye International Airport" },
+          "photos": [
+            { "search": "Daniel K. Inouye International Airport" },
+            { "search": "Honolulu International Airport terminal" }
+          ],
           "description": "ホテルからタクシーで約25〜30分。昼過ぎの便に向けて余裕をもって到着し、出国手続きへ。機内で一泊し、翌23日に日本へ帰着。",
           "tags": ["空港", "タクシー"]
         }

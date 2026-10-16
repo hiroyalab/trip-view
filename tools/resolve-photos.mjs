@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // 使い方: node tools/resolve-photos.mjs data/waikiki.json
 //
-// plan JSON の photo が { "search": "..." } または { "commons": "File:..." } のスポットについて、
+// plan JSON の photo（配列の場合は各要素）が { "search": "..." } または { "commons": "File:..." } のものについて、
 // Wikimedia Commons API でライセンスを確認し、実際の画像URLとクレジットに書き換える。
 // 採用するのは CC0 / パブリックドメイン / CC BY / CC BY-SA の写真だけ。
 // 見つからなかったスポットは元のまま残し、最後に一覧を表示する。
@@ -77,23 +77,31 @@ let done = 0;
 
 for (const day of plan.days ?? []) {
   for (const spot of day.spots ?? []) {
-    const p = spot.photo;
-    if (!p || typeof p !== "object" || !(p.search || p.commons)) continue;
-    try {
-      const r = await lookup(p);
-      if (r) {
-        spot.photo = r;
-        done++;
-        console.log(`✓ ${spot.name}  ${r.license} / ${r.credit}`);
-      } else {
-        missed.push(spot.name);
-        console.log(`– ${spot.name}  条件に合う写真なし`);
+    // photo / photos は1件でも配列でもよい。配列の場合は要素ごとに書き換える
+    for (const key of ["photos", "photo"]) {
+      if (spot[key] == null) continue;
+      const list = Array.isArray(spot[key]) ? spot[key] : [spot[key]];
+      for (const [i, p] of list.entries()) {
+        if (!p || typeof p !== "object" || !(p.search || p.commons)) continue;
+        const label = list.length > 1 ? `${spot.name} [${i + 1}]` : spot.name;
+        try {
+          const r = await lookup(p);
+          if (r) {
+            list[i] = r;
+            done++;
+            console.log(`✓ ${label}  ${r.license} / ${r.credit}`);
+          } else {
+            missed.push(label);
+            console.log(`– ${label}  条件に合う写真なし`);
+          }
+        } catch (e) {
+          missed.push(label);
+          console.log(`× ${label}  ${e.message}`);
+        }
+        await sleep(500);
       }
-    } catch (e) {
-      missed.push(spot.name);
-      console.log(`× ${spot.name}  ${e.message}`);
+      if (!Array.isArray(spot[key])) spot[key] = list[0];
     }
-    await sleep(500);
   }
 }
 

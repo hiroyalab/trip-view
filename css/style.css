@@ -51,9 +51,23 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family
 .photo>*{grid-area:1/1}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
 .photo .ph{align-self:center;font-family:var(--font-head);font-size:1.1rem;color:#fff;padding:0 16px;text-align:center;text-shadow:0 1px 6px rgba(0,0,0,.25)}
-.name{font-family:var(--font-head);font-weight:700;font-size:1.15rem;line-height:1.35;margin:0 0 4px}
+/* スライドショー：横スクロール＋スナップで1枚ずつ。写真が読み込めるまでは後ろのプレースホルダーが見える */
+.photo .track{width:100%;height:100%;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none}
+.photo .track::-webkit-scrollbar{display:none}
+.photo .slide{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}
+.photo .nav{justify-self:start;margin:0 8px;width:32px;height:32px;padding:0 0 3px;border:0;border-radius:50%;background:rgba(0,0,0,.4);color:#fff;font:700 1.4rem/1 var(--font-body);cursor:pointer;display:grid;place-items:center}
+.photo .nav.next{justify-self:end}
+.photo .nav:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.photo .dots{align-self:end;display:flex;gap:6px;margin-bottom:8px;pointer-events:none}
+.photo .dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:0 0 3px rgba(0,0,0,.5)}
+.photo .dots span.on{background:#fff}
+.photo:not(.multi) :is(.nav,.dots){display:none}
+.title-row{margin:0 0 4px;font-family:var(--font-head);font-size:1.15rem;line-height:1.35}
+.name{display:inline;font:inherit;font-weight:700;margin:0 10px 0 0}
+/* タイトルと同じ文字サイズで、名前の直後に続けて並べる（入りきらなければ次の行の頭へ） */
+.more-photos{display:inline-block;color:var(--lagoon);white-space:nowrap}
 .addr{display:inline-block;font-size:.8rem;color:var(--lagoon);text-decoration:none;margin-bottom:8px;word-break:break-word}
-.addr:focus-visible,.more:focus-visible{outline:2px solid var(--lagoon);outline-offset:2px;border-radius:4px}
+.addr:focus-visible,.more:focus-visible,.more-photos:focus-visible{outline:2px solid var(--lagoon);outline-offset:2px;border-radius:4px}
 .desc{margin:0;font-size:.92rem;line-height:1.75}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding:0;list-style:none}
 .tags li{font-size:.72rem;padding:3px 9px;border-radius:999px;background:color-mix(in srgb,var(--day) 14%,var(--surface));color:var(--ink)}
@@ -80,7 +94,7 @@ html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family
 }
 
 @media (prefers-reduced-motion:reduce){
-  #plan{scroll-behavior:auto}
+  #plan,.photo .track{scroll-behavior:auto}
   .dot,.pin{transition:none}
 }
 

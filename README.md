@@ -83,7 +83,8 @@ python3 -m http.server 8000
 | `address` | | 住所。タップでGoogleマップが開く |
 | `lat` / `lng` | | 緯度・経度。省略すると住所から自動取得（精度は住所次第なので、入れておくのがおすすめ） |
 | `time` | | 時刻 |
-| `photo` | | 写真。書き方は下の「写真と権利」を参照。読めない場合はスポット名入りの色面を表示 |
+| `photo` | | 写真。書き方は下の「写真と権利」を参照。配列で複数枚書くとスライドショーになる。読めない場合はスポット名入りの色面を表示 |
+| `imageQuery` | | タイトル横の「🔍 もっと写真を見る」リンク（Google画像検索）の検索語。省略するとスポット名で検索 |
 | `description` | | 説明文 |
 | `tags` | | タグの配列 |
 | `url` | | 公式サイトなどのリンク |
@@ -101,6 +102,16 @@ python3 -m http.server 8000
 | Commonsから自動で探す | `{ "search": "Hanauma Bay" }` | 自動（下記） |
 | 自分で用意した写真 | `"images/waikiki.jpg"` | 自分で撮った写真を使う |
 | 他サイトの写真 | `{ "url": "https://...", "credit": "作者名", "license": "CC BY 4.0", "licenseUrl": "https://creativecommons.org/licenses/by/4.0/", "source": "https://元ページ" }` | 自分で確認してクレジットを書く |
+
+複数枚を見せたいときは、上の書き方を配列で並べます（最大10枚。キーは `photo` / `photos` のどちらでも可）。横スワイプか左右のボタンで切り替えるスライドショーになり、クレジットは表示中の写真のものが出ます。読み込めなかった写真は自動で飛ばします。
+
+```json
+"photo": [
+  { "search": "Diamond Head" },
+  { "commons": "File:Waikiki Beach (2024)-L1004709.jpg" },
+  "images/diamondhead.jpg"
+]
+```
 
 `commons` と `search` を使った場合は、表示のたびに [Wikimedia Commons](https://commons.wikimedia.org/) の公式APIでライセンスを確認します。
 
